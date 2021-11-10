@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" ng-app = "myApp" np-controller = "myCtrl">
+        <h1>Contact our sales team</h1>
+
+        <form action="">
+            <div class="box">
+                <div class="firstname">
+                    <label for="firstName" class="aster">First Name:</label><br>
+                    <input type="text" name="firstName" id="">
+                </div>
+                
+                <div class="lastname">
+                    <label for="lastName" class="aster">Last Name:</label><br>
+                    <input type="text" name="lastName" id="">
+                </div>
+                
+                <div class="email">
+                    <label for="email" class="aster">Email Address:</label><br>
+                    <input type="text" name="email" id="">
+                    <span ng-show = "!">Please enter a valid email</span>
+                </div> 
+                
+                <div class="phone">
+                    <label for="phoneNumber" class="aster">Phone Number:</label><br>
+                    <input type="text" name="phoneName" id="">
+                </div>
+                
+            </div> <br><br>
+
+            <label for="companyName" class="aster">Company Name:</label><br>
+            <input type="text" name="companyName" id=""><br><br><br>
+
+            <label for="selectMe">How did you hear about us?</label><br>
+            <select name="selectMe" id="">
+                <!-- <option value=""></option> -->
+                <option value="">Internet</option>
+                <option value="">Friend</option>
+                <option value="">Newspaper</option>
+                <option value="">Other</option>
+            </select> <br><br><br>
+
+            <label for="comments">Comments:</label><br>
+            <textarea name="comments" id="" rows="4"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        let app = module.angular('myApp',[]);
+        app.controller = ('myCtrl',()=>{
+
+        })
+
+    </script>
+</body>
+</html>
